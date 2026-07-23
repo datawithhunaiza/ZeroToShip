@@ -59,4 +59,4 @@ DoomFolder scans your folders (Downloads, Desktop, Documents, etc.) and provides
 - Wasted space calculations
 - Error reporting
 
-**Remember:** DoomFolder never deletes files. Always review recommendations before taking action.
+**NOTE:** DoomFolder never deletes files. Always review recommendations before taking action.
