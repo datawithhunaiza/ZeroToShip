@@ -32,21 +32,6 @@ from utils import (
 
 
 class DoomFolderApp:
-    """
-    Application controller for DoomFolder CLI.
-    
-    This class manages:
-    - User interface and menu
-    - Current DoomFolder instance
-    - Menu state and navigation
-    
-    Why this class exists:
-    - Separates application flow from analysis logic
-    - Manages state (current folder, current results)
-    - Demonstrates controller pattern in MVC
-    - Makes CLI testable
-    """
-    
     def __init__(self) -> None:
         """Initialize the application."""
         self.current_folder: Optional[DoomFolder] = None
@@ -313,9 +298,6 @@ class DoomFolderApp:
     def _check_folder_scanned(self) -> bool:
         """
         Verify that a folder has been scanned.
-        
-        Returns:
-            bool: True if folder is ready, False otherwise
         """
         if self.current_folder is None:
             print("❌ No folder scanned yet. Please scan a folder first.")
@@ -331,8 +313,6 @@ class DoomFolderApp:
         """
         Route menu choice to appropriate handler.
         
-        Args:
-            choice (str): User's menu selection
         """
         handlers = {
             '1': self.scan_folder_menu,
@@ -370,15 +350,6 @@ class DoomFolderApp:
         self.running = False
     
     def run(self) -> None:
-        """
-        Main application loop.
-        
-        Demonstrates:
-        - Event loop pattern
-        - Menu-driven interface
-        - Error handling in loop
-        - Graceful termination
-        """
         self.show_welcome()
         
         try:
@@ -396,15 +367,6 @@ class DoomFolderApp:
 
 
 def main() -> None:
-    """
-    Entry point for the application.
-    
-    Why this function exists:
-    - Provides clean entry point for execution
-    - Allows importing DoomFolder for testing
-    - Demonstrates proper application structure
-    - Follows Python conventions
-    """
     app = DoomFolderApp()
     app.run()
 
