@@ -1,5 +1,5 @@
 # ZeroToShip
-Summer Activity 2026
+Summer Break Activity 2026
 
 ### 🚀 Phase 1 – DoomFolder
 
